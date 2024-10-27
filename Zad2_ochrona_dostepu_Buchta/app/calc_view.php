@@ -18,7 +18,7 @@
 	<label for="id_lat">liczba lat 1-30 </label>
 	<input id ="lat" type="number" name="lat" min=1 max=30 value="<?php print($lat);?>" ><br />
 	<label for="id_procent">Oprocentowanie R/R 1-10 </label>
-	<input id ="procent" type="number" name="procent" min="1" max="10" value="<?php print($procent);?>"><br />
+	<input id ="procent" type="number" name="procent" min="1" max="10"  step ="0.1" value="<?php print($procent);?>"><br />
 	<input type="submit" value="Oblicz" class="pure-button pure-button-primary" />
 </form>	
 

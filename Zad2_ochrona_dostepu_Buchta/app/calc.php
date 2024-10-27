@@ -61,12 +61,12 @@ function process(&$kwota,&$lat,&$procent,&$messages,&$wynik,&$kwota_dlugu){
 	//konwersja parametrów na int
 	$kwota = intval($kwota);
 	$lat = intval($lat);
-	$procent = intval($procent);
+	$procent = floatval($procent);
 	
 	if(($role!='admin')&& ($procent<5))
 	{
 		
-		$messages [] = 'Tylko administrator może miec mniejsze oprocentowanie niż 5';
+		$messages [] = 'Tylko doradce może dać mniejsze oprocentowanie niż 5';
 		
 	}else{
 		
