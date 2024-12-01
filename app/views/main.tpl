@@ -28,7 +28,16 @@
 									
 								</ul>
 							</li>
-							<li><a href="#" class="button primary">Zaloguj</a></li>
+                                                      
+                                                       {if (isset($user))}
+                                                           Rola: {$user["nazwa_roli"]}
+                                                           <li><a href="{$conf->action_url}logout" class="button primary">Wyloguj</a></li>
+                                                          
+                                                       {else}
+                                                          
+							<li><a href="{$conf->action_url}Login" class="button primary">Zaloguj</a></li>
+                                                        {/if}
+                                                        
 						</ul>
 					</nav>
 				</header>
@@ -38,11 +47,15 @@
 					<div class="container">
 						<header class="major">
 							<h2>Sklep Internetowy  - Elektro Hub</h2>
+                                                       
 							<blockquote>Czy jest tanio? Jest Tanio. Czy jest dobrze? Jest tanio.</blockquote>
+                                                        
 						</header>
 
                                                 
                                                {block name="content"}  {/block}
+                                               
+                                               {block name=Wiadomosci} {/block}
 					</div>
 				</div>
 

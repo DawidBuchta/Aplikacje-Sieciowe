@@ -8,6 +8,7 @@
  *
  *  * @author Przemysław Kudłacik
  */
+
 require_once 'core/Config.class.php';
 require_once 'core/App.class.php';
 

@@ -3,7 +3,7 @@
 
 namespace app\controllers;
 use core\App;
-use core\przedmiot;
+use core\SessionUtils;
 
 class OfertaCtrl {
     
@@ -18,9 +18,8 @@ class OfertaCtrl {
                 
                 
               
-        
-        
-        
+        $user = SessionUtils::loadObject('user',true);
+        App::getSmarty()->assign('user',$user);
         App::getSmarty()->assign("przedmiot",$przedmiot);
         App::getSmarty()->display("Oferta_View.tpl");
         

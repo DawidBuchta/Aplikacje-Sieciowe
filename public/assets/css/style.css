@@ -21,6 +21,11 @@ body{
     text-align: center;
     
 }
+.logo{
+    
+    height: 10%;
+    
+}
 
 .header, .footer, .content { 
 	margin: 1em auto;

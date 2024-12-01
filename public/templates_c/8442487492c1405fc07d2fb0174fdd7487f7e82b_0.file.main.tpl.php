@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-11-30 17:51:27
+/* Smarty version 4.3.4, created on 2024-12-01 15:08:25
   from 'C:\xampp\htdocs\AS\Sklep_Internetowy\amelia\app\views\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_674b428fb559f1_58452642',
+  'unifunc' => 'content_674c6dd9e434b9_75267625',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8442487492c1405fc07d2fb0174fdd7487f7e82b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\AS\\Sklep_Internetowy\\amelia\\app\\views\\main.tpl',
-      1 => 1732985484,
+      1 => 1733062094,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674b428fb559f1_58452642 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674c6dd9e434b9_75267625 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -58,7 +58,19 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 									
 								</ul>
 							</li>
-							<li><a href="#" class="button primary">Zaloguj</a></li>
+                                                      
+                                                       <?php if (((isset($_smarty_tpl->tpl_vars['user']->value)))) {?>
+                                                           Rola: <?php echo $_smarty_tpl->tpl_vars['user']->value["nazwa_roli"];?>
+
+                                                           <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+logout" class="button primary">Wyloguj</a></li>
+                                                          
+                                                       <?php } else { ?>
+                                                          
+							<li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+Login" class="button primary">Zaloguj</a></li>
+                                                        <?php }?>
+                                                        
 						</ul>
 					</nav>
 				</header>
@@ -68,12 +80,19 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 					<div class="container">
 						<header class="major">
 							<h2>Sklep Internetowy  - Elektro Hub</h2>
+                                                       
 							<blockquote>Czy jest tanio? Jest Tanio. Czy jest dobrze? Jest tanio.</blockquote>
+                                                        
 						</header>
 
                                                 
                                                <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1242211529674b428fb54cd6_05693472', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_884973332674c6dd9e41cb4_29812759', "content");
+?>
+
+                                               
+                                               <?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_973228047674c6dd9e42992_34213373', 'Wiadomosci');
 ?>
 
 					</div>
@@ -126,12 +145,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1242211529674b428f
 </html>
 <?php }
 /* {block "content"} */
-class Block_1242211529674b428fb54cd6_05693472 extends Smarty_Internal_Block
+class Block_884973332674c6dd9e41cb4_29812759 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1242211529674b428fb54cd6_05693472',
+    0 => 'Block_884973332674c6dd9e41cb4_29812759',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -140,4 +159,19 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 }
 /* {/block "content"} */
+/* {block 'Wiadomosci'} */
+class Block_973228047674c6dd9e42992_34213373 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'Wiadomosci' => 
+  array (
+    0 => 'Block_973228047674c6dd9e42992_34213373',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+ <?php
+}
+}
+/* {/block 'Wiadomosci'} */
 }
