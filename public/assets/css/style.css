@@ -7,6 +7,7 @@ body{
     background: #464646;
 }
 
+
 .srodek {
     
    margin: auto;
@@ -43,11 +44,12 @@ body{
 .messages {	margin: 1em auto; }
 
 .err, .inf, .res {
-	padding: 1em 1em 1em 3em;
-	border-radius: 1em;
+	padding: 1em 1em 1em 3em;	
 	color: #222;
+         border: 0.01em solid #aaa;
+        border-radius: 1em;
         font-family: "Times New Roman", Times, serif;
-        width: 50%;
+        width: 45%;
 }
 
 .err { background-color: #f88; }

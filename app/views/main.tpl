@@ -34,7 +34,7 @@
                                                            <li><a href="{$conf->action_url}logout" class="button primary">Wyloguj</a></li>
                                                           
                                                        {else}
-                                                          
+                                                        <li><a href="{$conf->action_url}Zarejestruj" class="button primary">Zarejestruj</a></li>  
 							<li><a href="{$conf->action_url}Login" class="button primary">Zaloguj</a></li>
                                                         {/if}
                                                         
@@ -54,8 +54,9 @@
 
                                                 
                                                {block name="content"}  {/block}
+                                              
+                                               {block name="Wiadomosci"} {/block}
                                                
-                                               {block name=Wiadomosci} {/block}
 					</div>
 				</div>
 

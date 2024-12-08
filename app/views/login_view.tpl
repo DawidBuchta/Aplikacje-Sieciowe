@@ -27,43 +27,17 @@
                 <div>            
 {/block}
 
-{block name=Wiadomosci}
+ {block name="Wiadomosci"}
+    
+      <ol>
     {foreach $msgs->getMessages() as $msg}
- <div class=" {if $msg->isInfo()}inf{/if}
-              {if $msg->isWarning()}alert-warning{/if}
-              {if $msg->isError()}err{/if}" role="alert">
+ <li class=" {if $msg->isInfo()}inf{/if}
+              {if $msg->isError()}err{/if}" >
     {$msg->text}
- </div>
+ </li>
+  
 {/foreach}
-    
-    
-      
-     
-{*{if $msgs->isError()}
-   
-		
-		<h4>Wystąpiły błędy: </h4>
-		<ol class="err">
-		{foreach  $msgs->getErrors() as $err}
-		{strip}
-			<li>{$err}</li>
-		{/strip}
-		{/foreach}
-		</ol>
-	
-
-{/if}
-{if $msgs->isInfo()}
-	<h4>Informacje: </h4>
-	<ol class="inf ">
-	{foreach $msgs->getInfos() as $inf}
-	{strip}
-		<li>{$inf}</li>
-	{/strip}
-	{/foreach}
-	</ol>
-{/if}*}
-
-
+  </ol>
 {/block}
+
 

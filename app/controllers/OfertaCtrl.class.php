@@ -13,7 +13,7 @@ class OfertaCtrl {
      public function action_Oferta() {
 		        
         
-     $przedmiot = App::getDB()->select("przedmioty",["[><]atrybuty"=>["id_spec"=>"id_spec"]],["przedmioty.id_przedmiot","przedmioty.cena","atrybuty.wartosc","przedmioty.nazwa"]);
+     $przedmiot = App::getDB()->select("przedmioty",["[><]atrybuty"=>["id_przedmiot"=>"id_spec"]],["przedmioty.id_przedmiot","przedmioty.cena","atrybuty.wartosc","przedmioty.nazwa"]);
        
                 
                 

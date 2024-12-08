@@ -15,7 +15,7 @@ class PrzedmiotCtrl {
         $id_przedmiot= $_GET['id'];
      $przedmiot = App::getDB()->select(
              "przedmioty",
-             ["[><]atrybuty"=>["id_spec"=>"id_spec"]],
+             ["[><]atrybuty"=>["id_przedmiot"=>"id_spec"]],
              ["przedmioty.id_przedmiot","przedmioty.cena","atrybuty.wartosc","przedmioty.nazwa"],
              ["przedmioty.id_przedmiot"=>$id_przedmiot]);
        

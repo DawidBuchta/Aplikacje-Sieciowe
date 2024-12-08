@@ -119,6 +119,7 @@ class LoginCtrl{
            
             
             App::getSmarty()->display("login_view.tpl");
+            
             exit();
    
     }
