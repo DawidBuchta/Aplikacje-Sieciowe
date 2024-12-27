@@ -10,6 +10,8 @@ Utils::addRoute('logout', 'LoginCtrl');
 
 Utils::addRoute('Zarejestruj', 'RejestracjaCtrl');
 
-Utils::addRoute('Oferta', 'OfertaCtrl');
-Utils::addRoute('Przedmiot', 'PrzedmiotCtrl');
+Utils::addRoute('Oferta', 'WyswietlCtrl');
+Utils::addRoute('Przedmiot', 'WyswietlCtrl');
+Utils::addRoute('wyswietl', 'UsersCtrl');
+Utils::addRoute('koszyk', 'koszykCtrl');
 //Utils::addRoute('action_name', 'controller_class_name');

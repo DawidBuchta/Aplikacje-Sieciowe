@@ -31,7 +31,9 @@
                                                       
                                                        {if (isset($user))}
                                                            Rola: {$user["nazwa_roli"]}
+                                                           <li><a href="{$conf->action_url}wyswietl" class="button primary">Wyswietl</a></li>
                                                            <li><a href="{$conf->action_url}logout" class="button primary">Wyloguj</a></li>
+                                                           <li> <a href="{$conf->action_url}koszyk" class= "icon solid alt fa-shopping-cart fa-2x" ></a></li>
                                                           
                                                        {else}
                                                         <li><a href="{$conf->action_url}Zarejestruj" class="button primary">Zarejestruj</a></li>  

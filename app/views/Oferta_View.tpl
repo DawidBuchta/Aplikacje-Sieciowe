@@ -8,7 +8,7 @@
                 <div class="row gtr-50 gtr-uniform">
 
                     {foreach $przedmiot as $item}
-                        <div class="col-4 col-6-xsmall przedmiot">
+                        <div class="col-3 col-4-medium col-6-xsmall przedmiot">
                             <a href="{$conf->action_url}Przedmiot&id={$item["id_przedmiot"]}">
                             <span class="image fit"><img src="{$item["wartosc"]}" alt="" /></span>
                             <label class="tekst-srodek"> {$item["nazwa"]}</label>
